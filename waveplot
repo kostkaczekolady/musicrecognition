@@ -1,0 +1,22 @@
+import matplotlib.pyplot as plt
+import librosa as lr
+import librosa.display
+
+
+
+y, sr = lr.load("./trumpet2.mp3")
+plt.figure()
+plt.subplot(4, 1, 2)
+lr.display.waveplot(y, sr=sr)
+plt.title('Trumpet')
+plt.show()
+
+#
+#
+# def visualization(y, sr, xlabel, ylabel, title):
+#     plt.rcParams['figure.figsize'] = (14, 4)
+#     lr.display.waveplot(y, sr=sr)
+#     plt.xlabel(xlabel)
+#     plt.ylabel(ylabel)
+#     plt.title(title)
+#     # plt.show()
